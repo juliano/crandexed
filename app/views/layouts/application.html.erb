@@ -7,10 +7,22 @@
   <%= csrf_meta_tags %>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js">
+  <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css">
+
 </head>
 <body>
 
 <%= yield %>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.table').dataTable();
+} );
+</script>
 
 </body>
 </html>

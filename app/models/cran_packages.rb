@@ -19,7 +19,7 @@ class CranPackages
   def basic_information
     begin
       packages_info = Net::HTTP.get(URL)
-      packages = Dcf.parse(packages_info)[0, 10]
+      packages = Dcf.parse(packages_info)[0, 50]
       packages.map {|p| { name: p["Package"], version: p["Version"] } }
     rescue
       Kernel.puts("It was not possible to access cran site.")
