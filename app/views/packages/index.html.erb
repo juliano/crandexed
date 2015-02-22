@@ -1,6 +1,6 @@
 <h1>Cran Packages</h1>
 
-<table>
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Package name</th>
@@ -13,13 +13,11 @@
   <tbody>
     <% @packages.each do |package| %>
       <tr>
-        <td><%= package.name %></td>
-        <td><%= package.version %></td>
-        <td><%= package.title %></td>
-        <td><%= package.authors %></td>
-        <td><%= link_to 'Show', package %></td>
+        <td class="col-md-1"><%= package.name %></td>
+        <td class="col-md-1"><%= package.version %></td>
+        <td class="col-md-5"><%= package.title %></td>
+        <td class="col-md-4"><%= package.authors %></td>
+        <td class="col-md-1"><%= link_to 'Show', package %></td>
     <% end %>
   </tbody>
 </table>
-
-<br>
